@@ -18,10 +18,10 @@ public class PedidoResource {
 	private PedidoService service;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
-	public ResponseEntity<?> find(@PathVariable Integer id) { 
+	public ResponseEntity<Pedido> find(@PathVariable Integer id) { 
 		//pathvariable para o spring saber que o id da URL va para a variavel
 		
-		Pedido obj = service.buscar(id);
+		Pedido obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	
 	}

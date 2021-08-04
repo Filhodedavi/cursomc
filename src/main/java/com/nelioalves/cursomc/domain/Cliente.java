@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -30,7 +31,9 @@ public class Cliente implements Serializable {
 	private String cpfoucnpj;
 	private Integer tipo;
 
-	@OneToMany(mappedBy="cliente")
+	@OneToMany(mappedBy="cliente", cascade = CascadeType.ALL) 
+	// cascade com all, faz: toda a operacao que modificar um 
+	//cliente eu vou poder refletir em cascata nos enderecos. (apaga cliente, apaga enderecos associados)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	//colecao de strings associadas ao cliente para o telefone

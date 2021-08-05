@@ -11,8 +11,6 @@ import com.nelioalves.cursomc.services.Exceptions.ObjectNotFoundException;
 @Service
 public class PedidoService {
 
-	//declara dependencia dentro da classe e coloca autowired, essa dependencia vai ser
-	//automaticamente intanciada pelo spring, pelo mecanismo de injecao de dependencia
 	@Autowired 
 	private PedidoRepository repo;
 	

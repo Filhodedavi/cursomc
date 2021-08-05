@@ -21,6 +21,7 @@ import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.dto.CategoriaDTO;
 import com.nelioalves.cursomc.services.CategoriaService;
 
+//endpoints para o postman, para as pesquisas em web no geral
 @RestController
 @RequestMapping(value="/categorias")
 public class CategoriaResource {
